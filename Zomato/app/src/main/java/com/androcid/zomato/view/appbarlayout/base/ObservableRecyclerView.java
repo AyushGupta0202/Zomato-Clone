@@ -2,9 +2,10 @@
 
 package com.androcid.zomato.view.appbarlayout.base;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.R;
 
@@ -24,7 +25,7 @@ public class ObservableRecyclerView implements Observer {
 
   private OnScrollListener mOnScrollListener;
 
-  private RecyclerView mRecyclerView;
+  private final RecyclerView mRecyclerView;
 
   protected ObservableRecyclerView(@NonNull RecyclerView recyclerView) {
     mRecyclerView = recyclerView;

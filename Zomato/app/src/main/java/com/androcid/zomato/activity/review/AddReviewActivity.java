@@ -6,9 +6,6 @@ import android.net.TrafficStats;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -17,6 +14,10 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.BuildConfig;
 import com.androcid.zomato.R;
@@ -60,7 +61,7 @@ public class AddReviewActivity extends AppCompatActivity {
 
     private static final String TAG = AddReviewActivity.class.getSimpleName();
     private static final int SEARCH_PLACE = 111;
-    private Context context = AddReviewActivity.this;
+    private final Context context = AddReviewActivity.this;
 
     String restaurant_id, restaurant_branch_id, restaurant_name;
 

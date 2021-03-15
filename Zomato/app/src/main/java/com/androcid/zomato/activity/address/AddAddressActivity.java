@@ -3,9 +3,6 @@ package com.androcid.zomato.activity.address;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -15,6 +12,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.model.UserAddress;
@@ -36,7 +37,7 @@ public class AddAddressActivity extends AppCompatActivity {
 
     private static final String TAG = AddAddressActivity.class.getSimpleName();
     private static final int REQUEST_AREA = 110;
-    private Context context = AddAddressActivity.this;
+    private final Context context = AddAddressActivity.this;
 
     public static Intent getCallIntent(Context context, UserAddress userAddress) {
         Intent intent = new Intent(context, AddAddressActivity.class);

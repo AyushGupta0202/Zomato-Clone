@@ -3,11 +3,12 @@ package com.androcid.zomato.activity.photos;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.preference.SessionPreference;
@@ -27,7 +28,7 @@ public class AllMenuActivity extends AppCompatActivity {
 
     private static final String TAG = AllMenuActivity.class.getSimpleName();
     ViewPager viewPager;
-    private Context context = AllMenuActivity.this;
+    private final Context context = AllMenuActivity.this;
 
     public static Intent getCallIntent(Context context, String restaurant_branch_id) {
         Intent intent = new Intent(context, AllMenuActivity.class);

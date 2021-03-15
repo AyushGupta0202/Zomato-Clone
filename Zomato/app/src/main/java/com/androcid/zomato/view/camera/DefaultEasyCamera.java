@@ -17,8 +17,8 @@ import java.io.IOException;
  */
 public class DefaultEasyCamera implements EasyCamera {
 
-    private Camera camera;
-    private int id;
+    private final Camera camera;
+    private final int id;
     /**
      * Gets access to the default camera
      * See <a href="http://developer.android.com/reference/android/hardware/Camera.html#open%28%29">Camera.open()</a>

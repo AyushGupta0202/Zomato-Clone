@@ -40,9 +40,9 @@ public class PhotoItemDao extends AbstractDao<PhotoItem, Long> {
         public final static Property Path	    = new Property(++c, String.class, 	PATH, 	    false, PATH);
         public final static Property Tag	    = new Property(++c, String.class, 	TAG, 	    false, TAG);
         public final static Property Status	    = new Property(++c, Long.class, 	STATUS, 	    false, STATUS);
-    };
+    }
 
-    private DaoSession daoSession;
+   private DaoSession daoSession;
 
     public PhotoItemDao(DaoConfig config) {
         super(config);

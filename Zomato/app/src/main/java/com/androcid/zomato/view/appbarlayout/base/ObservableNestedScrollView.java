@@ -2,10 +2,11 @@
 
 package com.androcid.zomato.view.appbarlayout.base;
 
-import android.support.annotation.NonNull;
-import android.support.v4.widget.NestedScrollView;
 import android.view.View;
 import android.view.ViewTreeObserver;
+
+import androidx.annotation.NonNull;
+import androidx.core.widget.NestedScrollView;
 
 import com.androcid.zomato.R;
 
@@ -22,11 +23,11 @@ public class ObservableNestedScrollView implements Observer, NestedScrollView.On
     return observable;
   }
 
-  private NestedScrollView mNestedScrollView;
+  private final NestedScrollView mNestedScrollView;
 
   private OnScrollListener mOnScrollListener;
 
-  private boolean mOverrideOnScrollListener;
+  private final boolean mOverrideOnScrollListener;
 
   public ObservableNestedScrollView(@NonNull NestedScrollView nestedScrollView, boolean overrideOnScrollListener) {
     mNestedScrollView = nestedScrollView;

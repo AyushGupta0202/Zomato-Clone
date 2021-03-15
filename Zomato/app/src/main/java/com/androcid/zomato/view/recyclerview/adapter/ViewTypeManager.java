@@ -25,9 +25,9 @@ import java.util.Map;
  */
 public class ViewTypeManager {
 
-  private Map<String, Integer> mCache = new HashMap<>();
+  private final Map<String, Integer> mCache = new HashMap<>();
 
-  private Map<Integer, Pointer> mCacheReverse = new HashMap<>();
+  private final Map<Integer, Pointer> mCacheReverse = new HashMap<>();
 
   private int mCode = 0;
 

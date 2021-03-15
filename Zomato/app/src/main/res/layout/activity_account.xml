@@ -11,7 +11,7 @@
 
         <include layout="@layout/layout_toolbar_account" />
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
@@ -694,7 +694,7 @@
                 <include layout="@layout/layout_zomato_footer" />
             </LinearLayout>
 
-        </android.support.v4.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
         <!--Temp View For Bottom Gap-->
         <LinearLayout

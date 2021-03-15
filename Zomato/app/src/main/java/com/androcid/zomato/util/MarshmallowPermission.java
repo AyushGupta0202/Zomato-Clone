@@ -3,8 +3,9 @@ package com.androcid.zomato.util;
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 public class MarshmallowPermission {
 
@@ -24,11 +25,7 @@ public class MarshmallowPermission {
     /*RECORD_PERMISSION_REQUEST_CODE*/
     public boolean checkPermissionForRecord() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.RECORD_AUDIO);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public void requestPermissionForRecord() {
@@ -42,11 +39,7 @@ public class MarshmallowPermission {
     /*EXTERNAL_STORAGE_PERMISSION_REQUEST_CODE*/
     public boolean checkPermissionForWriteExternalStorage() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public void requestPermissionForWriteExternalStorage() {
@@ -61,11 +54,7 @@ public class MarshmallowPermission {
     /*EXTERNAL_STORAGE_PERMISSION_REQUEST_CODE*/
     public boolean checkPermissionForReadExternalStorage() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public void requestPermissionForReadExternalStorage() {
@@ -79,11 +68,7 @@ public class MarshmallowPermission {
     /*CAMERA_PERMISSION_REQUEST_CODE*/
     public boolean isPermissionForCameraGranted() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public void requestPermissionForCamera() {
@@ -97,11 +82,7 @@ public class MarshmallowPermission {
     /*CONTACTS_PERMISSION_REQUEST_CODE*/
     public boolean checkPermissionForContacts() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_CONTACTS);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public void requestPermissionForContacts() {
@@ -116,11 +97,7 @@ public class MarshmallowPermission {
     public boolean checkPermissionForLocation() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION);
         int result2 = ContextCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_COARSE_LOCATION);
-        if (result == PackageManager.PERMISSION_GRANTED && result2 == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED && result2 == PackageManager.PERMISSION_GRANTED;
     }
 
     public void requestPermissionForLocation() {

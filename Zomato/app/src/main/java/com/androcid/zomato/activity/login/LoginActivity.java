@@ -26,7 +26,7 @@ import com.androcid.zomato.util.Validate;
  */
 public class LoginActivity extends SignInBaseActivity {
 
-    private Context context = LoginActivity.this;
+    private final Context context = LoginActivity.this;
     private static final String TAG = LoginActivity.class.getSimpleName();
 
     //Email

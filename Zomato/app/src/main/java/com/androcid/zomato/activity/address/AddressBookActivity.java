@@ -4,15 +4,16 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.model.UserAddress;
@@ -32,7 +33,7 @@ import retrofit.client.Response;
 public class AddressBookActivity extends AppCompatActivity {
 
     private static final String TAG = AddressBookActivity.class.getSimpleName();
-    private Context context = AddressBookActivity.this;
+    private final Context context = AddressBookActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, AddressBookActivity.class);

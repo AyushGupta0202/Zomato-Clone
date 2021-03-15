@@ -6,15 +6,15 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
+
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.ViewCompat;
+import androidx.viewpager.widget.ViewPager;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.view.appbarlayout.base.ObservableFragment;
@@ -22,6 +22,7 @@ import com.androcid.zomato.view.appbarlayout.base.ObservablePagerAdapter;
 import com.androcid.zomato.view.appbarlayout.base.ScrollFlag;
 import com.androcid.zomato.view.appbarlayout.base.ScrollTargetCallback;
 import com.androcid.zomato.view.appbarlayout.base.Utils;
+import com.google.android.material.appbar.AppBarLayout;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -185,7 +186,7 @@ public class SmoothAppBarLayout extends AppBarLayout {
     }
   }
 
-  public static class Behavior extends BaseBehavior {
+  public class Behavior extends com.androcid.zomato.view.appbarlayout.BaseBehavior {
 
     protected ScrollFlag mScrollFlag;
 

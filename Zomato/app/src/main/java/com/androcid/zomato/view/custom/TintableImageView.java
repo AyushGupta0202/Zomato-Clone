@@ -6,12 +6,14 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+import androidx.appcompat.widget.AppCompatImageView;
+
 import com.androcid.zomato.R;
 
 /**
  * To handle selector tint of image view
  */
-public class TintableImageView extends ImageView {
+public class TintableImageView extends AppCompatImageView {
 
     private ColorStateList tint;
 

@@ -9,15 +9,16 @@ import android.net.TrafficStats;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.BuildConfig;
 import com.androcid.zomato.R;
@@ -317,7 +318,7 @@ public class SelectDeliveryAreaActivity extends AppCompatActivity implements
 
     private void handleLocation(Location location) {
         if (location != null) {
-            MyLg.e(TAG, "getLatitude() = " + String.valueOf(location.getLatitude()) + "\n getLongitude() = " + String.valueOf(location.getLongitude()));
+            MyLg.e(TAG, "getLatitude() = " + location.getLatitude() + "\n getLongitude() = " + location.getLongitude());
             stopListener();
 
             getNearbyLocation(location);

@@ -4,7 +4,9 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public class RectImageView extends ImageView {
+import androidx.appcompat.widget.AppCompatImageView;
+
+public class RectImageView extends AppCompatImageView {
     public RectImageView(Context context) {
         super(context);
     }

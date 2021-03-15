@@ -3,14 +3,14 @@ package com.androcid.zomato.activity.credit;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.model.RestaurantImage;
@@ -27,7 +27,7 @@ public class CreditHistoryActivity extends AppCompatActivity {
 
     private static final String TAG = CreditHistoryActivity.class.getSimpleName();
     ViewPager viewPager;
-    private Context context = CreditHistoryActivity.this;
+    private final Context context = CreditHistoryActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, CreditHistoryActivity.class);

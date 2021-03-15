@@ -3,9 +3,10 @@ package com.androcid.zomato.activity.photos;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.dao.DaoController;
@@ -21,7 +22,7 @@ import java.util.List;
 public class PhotosPagerActivity extends AppCompatActivity {
 
     private static final String TAG = PhotosPagerActivity.class.getSimpleName();
-    private Context context = PhotosPagerActivity.this;
+    private final Context context = PhotosPagerActivity.this;
 
     MyFont myFont;
     List<RestaurantImage> contentItemList;

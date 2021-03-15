@@ -1,8 +1,9 @@
 package com.androcid.zomato.model.room.viewmodel;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
+
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
 
 import com.androcid.zomato.model.room.AppDatabase;
 import com.androcid.zomato.model.room.UserLocation;
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class UserLocationViewModel extends AndroidViewModel {
 
-    private AppDatabase appDatabase;
+    private final AppDatabase appDatabase;
     public UserLocationViewModel(Application application) {
         super(application);
 

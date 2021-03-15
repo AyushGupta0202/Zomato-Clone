@@ -11,7 +11,7 @@ import java.util.Hashtable;
 
 public class MyFont {
 
-	private Context context;
+	private final Context context;
 	private Typeface mTypeface;
 
 	public static final int NORMAL = Typeface.NORMAL;
@@ -29,7 +29,7 @@ public class MyFont {
 
 	public static final String DEFAULT_FONT = VERA_SANS;
 
-	private String[] fontList =
+	private final String[] fontList =
 		{
 				VERA_SANS, VERA_SANS_BOLD
 		};

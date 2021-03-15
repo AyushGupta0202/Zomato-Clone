@@ -3,11 +3,12 @@ package com.androcid.zomato.activity.profile;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.activity.SelectLocationActivity;
@@ -28,7 +29,7 @@ import retrofit.client.Response;
 public class EditProfileActivity extends AppCompatActivity {
 
     private static final String TAG = EditProfileActivity.class.getSimpleName();
-    private Context context = EditProfileActivity.this;
+    private final Context context = EditProfileActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, EditProfileActivity.class);

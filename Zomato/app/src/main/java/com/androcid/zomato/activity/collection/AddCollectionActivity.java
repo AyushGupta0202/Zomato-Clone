@@ -3,15 +3,16 @@ package com.androcid.zomato.activity.collection;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.model.CollectionItem;
@@ -26,7 +27,7 @@ public class AddCollectionActivity extends AppCompatActivity {
 
     private static final String TAG = AddCollectionActivity.class.getSimpleName();
     private static final int COLLECTION_CREATED = 111;
-    private Context context = AddCollectionActivity.this;
+    private final Context context = AddCollectionActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, AddCollectionActivity.class);
@@ -229,10 +230,7 @@ public class AddCollectionActivity extends AppCompatActivity {
 
     private boolean validDetails() {
 
-        if (collectionName.getText().toString().length() != 0) {
-            return true;
-        }
-        return false;
+        return collectionName.getText().toString().length() != 0;
 
     }
 }

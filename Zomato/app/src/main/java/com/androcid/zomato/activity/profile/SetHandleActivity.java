@@ -5,13 +5,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.preference.SessionPreference;
@@ -27,7 +28,7 @@ import retrofit.client.Response;
 public class SetHandleActivity extends AppCompatActivity {
 
     private static final String TAG = SetHandleActivity.class.getSimpleName();
-    private Context context = SetHandleActivity.this;
+    private final Context context = SetHandleActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, SetHandleActivity.class);

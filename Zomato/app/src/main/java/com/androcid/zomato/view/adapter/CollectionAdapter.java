@@ -1,12 +1,13 @@
 package com.androcid.zomato.view.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.model.CollectionItem;
@@ -85,7 +86,7 @@ public class CollectionAdapter extends RecyclerView.Adapter<CollectionAdapter.Vi
     }
 
     public interface ClickListener {
-        public void onItemClickListener(View v, int pos);
+        void onItemClickListener(View v, int pos);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

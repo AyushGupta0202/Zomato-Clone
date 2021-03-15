@@ -3,17 +3,18 @@ package com.androcid.zomato.activity.base;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.androcid.zomato.R;
 import com.androcid.zomato.activity.AccountActivity;
-import com.androcid.zomato.activity.collection.CollectionActivity;
 import com.androcid.zomato.activity.FeedActivity;
 import com.androcid.zomato.activity.collection.AddCollectionActivity;
+import com.androcid.zomato.activity.collection.CollectionActivity;
 import com.androcid.zomato.activity.photos.PickPhotosActivity;
 import com.androcid.zomato.activity.review.AddReviewActivity;
 import com.androcid.zomato.util.Constant;
@@ -47,7 +48,7 @@ public class HomeBaseActivity extends AppCompatActivity {
     LinearLayout centerButtonLay;
     ImageView centerButton;
     LinearLayout revealLay;
-    private Context context = HomeBaseActivity.this;
+    private final Context context = HomeBaseActivity.this;
 
     public void initialiseBottomView(final int screenType) {
         this.screenType = screenType;

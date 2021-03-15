@@ -7,13 +7,13 @@ import android.content.Intent;
 import android.net.TrafficStats;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.GridLayoutManager;import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.BuildConfig;
 import com.androcid.zomato.R;
@@ -49,7 +49,7 @@ import static com.androcid.zomato.util.Constant.APP_INITIATED_REQUEST;
 public class HomeActivity extends HomeBaseActivity {
 
     private static final String TAG = HomeActivity.class.getSimpleName();
-    private Context context = HomeActivity.this;
+    private final Context context = HomeActivity.this;
 
     //Might Like
     List<RestaurantItem> mightList;

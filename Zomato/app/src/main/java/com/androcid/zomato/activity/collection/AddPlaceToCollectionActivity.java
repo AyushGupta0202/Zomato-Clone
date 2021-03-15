@@ -5,13 +5,14 @@ import android.content.Intent;
 import android.net.TrafficStats;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.BuildConfig;
 import com.androcid.zomato.R;
@@ -41,7 +42,7 @@ import static com.androcid.zomato.util.Constant.APP_INITIATED_REQUEST;
 public class AddPlaceToCollectionActivity extends AppCompatActivity {
 
     private static final String TAG = AddPlaceToCollectionActivity.class.getSimpleName();
-    private Context context = AddPlaceToCollectionActivity.this;
+    private final Context context = AddPlaceToCollectionActivity.this;
 
     public static Intent getCallIntent(Context context, CollectionItem item) {
         Intent intent = new Intent(context, AddPlaceToCollectionActivity.class);
@@ -107,11 +108,7 @@ public class AddPlaceToCollectionActivity extends AppCompatActivity {
         for (int i = 0; i < allList.size(); i++) {
 
             String id = allList.get(i).getId() + "";
-            if (selectedRestaurants.contains(id)) {
-                allList.get(i).setSelected(true);
-            } else {
-                allList.get(i).setSelected(false);
-            }
+            allList.get(i).setSelected(selectedRestaurants.contains(id));
         }
 
         allAdapter.refresh(allList);

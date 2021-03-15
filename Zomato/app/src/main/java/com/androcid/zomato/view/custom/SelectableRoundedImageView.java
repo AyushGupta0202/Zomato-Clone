@@ -23,13 +23,15 @@ import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+import androidx.appcompat.widget.AppCompatImageView;
+
 import com.androcid.zomato.R;
 import com.androcid.zomato.util.MyLg;
 
 /**
  * Created by Androcid-7 on 04-12-2015.
  */
-public class SelectableRoundedImageView extends ImageView {
+public class SelectableRoundedImageView extends AppCompatImageView {
 
     public static final String TAG = "SelectableRoundedImageView";
     private static final ScaleType[] sScaleTypeArray = {
@@ -287,12 +289,12 @@ public class SelectableRoundedImageView extends ImageView {
         private final int mBitmapHeight;
         private final Paint mBitmapPaint;
         private final Paint mBorderPaint;
-        private RectF mBounds = new RectF();
-        private RectF mBorderBounds = new RectF();
-        private BitmapShader mBitmapShader;
+        private final RectF mBounds = new RectF();
+        private final RectF mBorderBounds = new RectF();
+        private final BitmapShader mBitmapShader;
 
-        private float[] mRadii = new float[]{0, 0, 0, 0, 0, 0, 0, 0};
-        private float[] mBorderRadii = new float[]{0, 0, 0, 0, 0, 0, 0, 0};
+        private final float[] mRadii = new float[]{0, 0, 0, 0, 0, 0, 0, 0};
+        private final float[] mBorderRadii = new float[]{0, 0, 0, 0, 0, 0, 0, 0};
 
         private boolean mOval = false;
 
@@ -302,8 +304,8 @@ public class SelectableRoundedImageView extends ImageView {
         // original ImageView.
         private ScaleType mScaleType = ScaleType.FIT_CENTER;
 
-        private Path mPath = new Path();
-        private Bitmap mBitmap;
+        private final Path mPath = new Path();
+        private final Bitmap mBitmap;
         private boolean mBoundsConfigured = false;
 
         public SelectableRoundedCornerDrawable(Bitmap bitmap, Resources r) {

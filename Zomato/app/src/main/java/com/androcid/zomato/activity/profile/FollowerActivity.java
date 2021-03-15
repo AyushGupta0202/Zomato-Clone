@@ -3,12 +3,13 @@ package com.androcid.zomato.activity.profile;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.tabs.TabLayout;
 import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.util.Constant;
@@ -23,7 +24,7 @@ import com.androcid.zomato.view.pageradapter.ViewPagerAdapter;
 public class FollowerActivity extends AppCompatActivity {
 
     private static final String TAG = FollowerActivity.class.getSimpleName();
-    private Context context = FollowerActivity.this;
+    private final Context context = FollowerActivity.this;
 
     public static Intent getCallIntent(Context context, String user_id) {
         Intent intent = new Intent(context, FollowerActivity.class);

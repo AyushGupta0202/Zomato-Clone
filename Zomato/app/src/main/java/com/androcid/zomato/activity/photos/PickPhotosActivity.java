@@ -10,15 +10,15 @@ import android.hardware.Camera;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.TextureView;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.dao.DaoController;
@@ -47,7 +47,7 @@ public class PickPhotosActivity extends AppCompatActivity {
     public static final int TYPE_NORMAL = 100;
     public static final int TYPE_SELECT = 101;
 
-    private Context context = PickPhotosActivity.this;
+    private final Context context = PickPhotosActivity.this;
 
     int type;
     public static Intent getCallIntent(Context context, int type) {

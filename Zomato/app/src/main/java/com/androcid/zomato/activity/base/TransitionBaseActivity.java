@@ -1,6 +1,6 @@
 package com.androcid.zomato.activity.base;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * To handle activity Transitions

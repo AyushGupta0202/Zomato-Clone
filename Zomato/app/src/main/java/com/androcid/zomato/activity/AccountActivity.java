@@ -29,7 +29,7 @@ import com.squareup.picasso.Picasso;
 public class AccountActivity extends HomeBaseActivity {
 
     private static final String TAG = AccountActivity.class.getSimpleName();
-    private Context context = AccountActivity.this;
+    private final Context context = AccountActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, AccountActivity.class);

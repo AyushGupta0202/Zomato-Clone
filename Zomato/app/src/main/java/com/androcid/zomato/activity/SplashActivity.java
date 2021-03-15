@@ -3,9 +3,10 @@ package com.androcid.zomato.activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.activity.login.StartActivity;
@@ -22,7 +23,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private static final String TAG = SplashActivity.class.getSimpleName();
     private static final long SPLASH_TIMEOUT = 2300;
-    private Context context = SplashActivity.this;
+    private final Context context = SplashActivity.this;
     private Handler CloseHandler;
 
     //TODO Fonts
@@ -33,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
     private Handler handler;
 
     private long startTime = new Date().getTime();
-    private Runnable CloseRun = new Runnable() {
+    private final Runnable CloseRun = new Runnable() {
         @Override
         public void run() {
 

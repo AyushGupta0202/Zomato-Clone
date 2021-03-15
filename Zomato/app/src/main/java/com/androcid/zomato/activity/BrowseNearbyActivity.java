@@ -9,15 +9,15 @@ import android.content.Intent;
 import android.net.TrafficStats;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.BuildConfig;
 import com.androcid.zomato.R;
@@ -28,7 +28,6 @@ import com.androcid.zomato.preference.SessionPreference;
 import com.androcid.zomato.retro.RestaurantResponse;
 import com.androcid.zomato.retro.RetroInterface;
 import com.androcid.zomato.util.Constant;
-import com.androcid.zomato.util.Toas;
 import com.androcid.zomato.view.adapter.PlaceDetailsAdapter;
 import com.androcid.zomato.view.adapter.PlaceSponsorHorizontalAdapter;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -37,6 +36,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,7 +63,7 @@ public class BrowseNearbyActivity extends AppCompatActivity implements OnMapRead
     List<RestaurantItem> allList;
     PlaceDetailsAdapter allAdapter;
     RecyclerView allItems;
-    private Context context = BrowseNearbyActivity.this;
+    private final Context context = BrowseNearbyActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, BrowseNearbyActivity.class);

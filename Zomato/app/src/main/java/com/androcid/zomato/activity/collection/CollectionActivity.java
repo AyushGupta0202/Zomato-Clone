@@ -3,8 +3,8 @@ package com.androcid.zomato.activity.collection;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
+
+import androidx.viewpager.widget.ViewPager;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.activity.base.HomeBaseActivity;
@@ -13,6 +13,7 @@ import com.androcid.zomato.view.fragment.collection.MyCollectionFragment;
 import com.androcid.zomato.view.fragment.collection.SavedCollectionFragment;
 import com.androcid.zomato.view.fragment.collection.SuggestedCollectionFragment;
 import com.androcid.zomato.view.pageradapter.ViewPagerAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 
 /**
@@ -22,7 +23,7 @@ public class CollectionActivity extends HomeBaseActivity {
 
     private static final String TAG = CollectionActivity.class.getSimpleName();
     ViewPager viewPager;
-    private Context context = CollectionActivity.this;
+    private final Context context = CollectionActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, CollectionActivity.class);

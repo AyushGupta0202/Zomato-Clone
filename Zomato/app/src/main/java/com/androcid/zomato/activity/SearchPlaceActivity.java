@@ -10,9 +10,6 @@ import android.net.TrafficStats;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -20,6 +17,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.BuildConfig;
 import com.androcid.zomato.R;
@@ -32,7 +33,6 @@ import com.androcid.zomato.retro.CuisineResponse;
 import com.androcid.zomato.retro.RestaurantResponse;
 import com.androcid.zomato.retro.RetroInterface;
 import com.androcid.zomato.util.Constant;
-import com.androcid.zomato.util.Toas;
 import com.androcid.zomato.view.adapter.CuisineHorizontalAdapter;
 import com.androcid.zomato.view.adapter.HomePlacesAdapter;
 import com.androcid.zomato.view.adapter.RecentPlacesAdapter;
@@ -64,7 +64,7 @@ public class SearchPlaceActivity extends AppCompatActivity {
     List<String> allList;
     RecentPlacesAdapter allAdapter;
     RecyclerView allItems;
-    private Context context = SearchPlaceActivity.this;
+    private final Context context = SearchPlaceActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, SearchPlaceActivity.class);

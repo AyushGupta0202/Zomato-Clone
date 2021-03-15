@@ -78,7 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.v4.widget.NestedScrollView
+            <androidx.core.widget.NestedScrollView
                 android:id="@+id/scrollView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -101,7 +101,7 @@
                         android:layout_marginBottom="10dp"
                         android:gravity="center">
 
-                        <android.support.v7.widget.RecyclerView
+                        <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/popularRecycler"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
@@ -114,14 +114,14 @@
                         android:layout_height="wrap_content"
                         android:text="RECENTLY SEARCHED" />
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recentRecycler"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
 
-            </android.support.v4.widget.NestedScrollView>
+            </androidx.core.widget.NestedScrollView>
 
             <RelativeLayout
                 android:id="@+id/searchView"
@@ -130,7 +130,7 @@
                 android:clickable="true"
                 android:background="@color/app_bg_color">
 
-                <android.support.v7.widget.RecyclerView
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/searchList"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />

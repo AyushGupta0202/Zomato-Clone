@@ -3,14 +3,15 @@
 package com.androcid.zomato.view.appbarlayout;
 
 import android.content.Context;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.RecyclerView;
+
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.view.appbarlayout.base.ObservableNestedScrollView;
@@ -18,6 +19,7 @@ import com.androcid.zomato.view.appbarlayout.base.ObservableRecyclerView;
 import com.androcid.zomato.view.appbarlayout.base.OnScrollListener;
 import com.androcid.zomato.view.appbarlayout.base.ScrollTargetCallback;
 import com.androcid.zomato.view.appbarlayout.base.Utils;
+import com.google.android.material.appbar.AppBarLayout;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -48,7 +50,7 @@ public abstract class BaseBehavior extends AppBarLayout.Behavior {
 
   private ScrollTargetCallback mScrollTargetCallback;
 
-  private List<Long> mScrollTargets = new ArrayList<>();
+  private final List<Long> mScrollTargets = new ArrayList<>();
 
   private View vScrollTarget;
 
@@ -98,11 +100,7 @@ public abstract class BaseBehavior extends AppBarLayout.Behavior {
   public void onNestedScroll(CoordinatorLayout coordinatorLayout, AppBarLayout child, View target, int dxConsumed, int dyConsumed,
                              int dxUnconsumed, int dyUnconsumed) {
     Utils.log("onNestedScroll | %d | %d | %d | %d", dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed);
-    if (dyUnconsumed < 0) {
-      mIsPullDownFromTop = true;
-    } else {
-      mIsPullDownFromTop = false;
-    }
+    mIsPullDownFromTop = dyUnconsumed < 0;
   }
 
   @Override
@@ -124,11 +122,11 @@ public abstract class BaseBehavior extends AppBarLayout.Behavior {
     Utils.log("onStopNestedScroll");
   }
 
-  @Override
-  public void setDragCallback(DragCallback callback) {
-    super.setDragCallback(callback);
-    mDragCallbackListener = callback;
-  }
+//  @Override
+//  public void setDragCallback(DragCallback callback) {
+//    super.setDragCallback(callback);
+//    mDragCallbackListener = callback;
+//  }
 
   public int getCurrentOffset() {
     return mCurrentOffset;

@@ -169,7 +169,7 @@ public interface EasyCamera { // TODO implements AutoCloseable {
      */
     Camera getRawCamera();
 
-    public static interface CameraActions {
+    interface CameraActions {
         void takePicture(Callbacks callbacks);
         EasyCamera getCamera();
     }
@@ -180,7 +180,7 @@ public interface EasyCamera { // TODO implements AutoCloseable {
 	 * actually do anything meaningful)
 	 * 
 	 */
-    public final class Callbacks {
+    final class Callbacks {
 
         private ShutterCallback shutterCallback;
         private PictureCallback rawCallback;
@@ -244,14 +244,14 @@ public interface EasyCamera { // TODO implements AutoCloseable {
     /**
      * See <a href="http://developer.android.com/reference/android/hardware/Camera.PictureCallback.html">Camera.PictureCallback</a> 
      */
-    public static interface PictureCallback {
+    interface PictureCallback {
         void onPictureTaken(byte[] data, CameraActions actions);
     }
 
     /**
      * See <a href="http://developer.android.com/reference/android/hardware/Camera.ShutterCallback.html">Camera.ShutterCallback</a> 
      */
-    public static interface ShutterCallback {
+    interface ShutterCallback {
         void onShutter();
     }
 }

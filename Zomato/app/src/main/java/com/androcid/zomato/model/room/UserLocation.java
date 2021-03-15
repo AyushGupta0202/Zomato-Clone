@@ -1,7 +1,7 @@
 package com.androcid.zomato.model.room;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import com.androcid.zomato.util.Constant;
 import com.google.gson.annotations.SerializedName;

@@ -1,5 +1,7 @@
 package com.androcid.zomato.util;
 
+import java.nio.charset.StandardCharsets;
+
 public class Base64
 {
     
@@ -487,8 +489,6 @@ public class Base64
      * @param serializableObject The object to encode
      * @param options Specified options
      * @return The Base64-encoded object
-     * @see com.reviewsection.utils.Base64#GZIP
-     * @see com.reviewsection.utils.Base64#DO_BREAK_LINES
      * @throws java.io.IOException if there is an error
      * @since 2.0
      */
@@ -593,8 +593,6 @@ public class Base64
      * @param source The data to convert
      * @param options Specified options
      * @return The Base64-encoded data as a String
-     * @see com.reviewsection.utils.Base64#GZIP
-     * @see com.reviewsection.utils.Base64#DO_BREAK_LINES
      * @throws java.io.IOException if there is an error
      * @throws NullPointerException if source array is null
      * @since 2.0
@@ -663,8 +661,6 @@ public class Base64
      * @param len Length of data to convert
      * @param options Specified options
      * @return The Base64-encoded data as a String
-     * @see com.reviewsection.utils.Base64#GZIP
-     * @see com.reviewsection.utils.Base64#DO_BREAK_LINES
      * @throws java.io.IOException if there is an error
      * @throws NullPointerException if source array is null
      * @throws IllegalArgumentException if source array, offset, or length are invalid
@@ -719,8 +715,6 @@ public class Base64
      * @param len Length of data to convert
      * @param options Specified options
      * @return The Base64-encoded data as a String
-     * @see com.reviewsection.utils.Base64#GZIP
-     * @see com.reviewsection.utils.Base64#DO_BREAK_LINES
      * @throws java.io.IOException if there is an error
      * @throws NullPointerException if source array is null
      * @throws IllegalArgumentException if source array, offset, or length are invalid
@@ -1429,7 +1423,7 @@ public class Base64
         try{
             out = new java.io.BufferedOutputStream(
                   new java.io.FileOutputStream( outfile ) );
-            out.write( encoded.getBytes("US-ASCII") ); // Strict, 7-bit output.
+            out.write( encoded.getBytes(StandardCharsets.US_ASCII) ); // Strict, 7-bit output.
         }   // end try
         catch( java.io.IOException e ) {
             throw e; // Catch and release to execute finally{}
@@ -1474,28 +1468,25 @@ public class Base64
     
     
     /**
-     * A {@link com.reviewsection.utils.Base64.InputStream} will read data from another
      * <tt>java.io.InputStream</tt>, given in the constructor,
      * and encode/decode to/from Base64 notation on the fly.
      *
-     * @see com.reviewsection.utils.Base64
      * @since 1.3
      */
     public static class InputStream extends java.io.FilterInputStream {
         
-        private boolean encode;         // Encoding or decoding
+        private final boolean encode;         // Encoding or decoding
         private int     position;       // Current position in the buffer
-        private byte[]  buffer;         // Small buffer holding converted data
-        private int     bufferLength;   // Length of buffer (3 or 4)
+        private final byte[]  buffer;         // Small buffer holding converted data
+        private final int     bufferLength;   // Length of buffer (3 or 4)
         private int     numSigBytes;    // Number of meaningful bytes in the buffer
         private int     lineLength;
-        private boolean breakLines;     // Break lines at less than 80 characters
-        private int     options;        // Record options used to create the stream.
-        private byte[]  decodabet;      // Local copies to avoid extra method calls
+        private final boolean breakLines;     // Break lines at less than 80 characters
+        private final int     options;        // Record options used to create the stream.
+        private final byte[]  decodabet;      // Local copies to avoid extra method calls
         
         
         /**
-         * Constructs a {@link com.reviewsection.utils.Base64.InputStream} in DECODE mode.
          *
          * @param in the <tt>java.io.InputStream</tt> from which to read data.
          * @since 1.3
@@ -1506,7 +1497,6 @@ public class Base64
         
         
         /**
-         * Constructs a {@link com.reviewsection.utils.Base64.InputStream} in
          * either ENCODE or DECODE mode.
          * <p>
          * Valid options:<pre>
@@ -1520,9 +1510,6 @@ public class Base64
          *
          * @param in the <tt>java.io.InputStream</tt> from which to read data.
          * @param options Specified options
-         * @see com.reviewsection.utils.Base64#ENCODE
-         * @see com.reviewsection.utils.Base64#DECODE
-         * @see com.reviewsection.utils.Base64#DO_BREAK_LINES
          * @since 2.0
          */
         public InputStream( java.io.InputStream in, int options ) {
@@ -1687,28 +1674,25 @@ public class Base64
     
     
     /**
-     * A {@link com.reviewsection.utils.Base64.OutputStream} will write data to another
      * <tt>java.io.OutputStream</tt>, given in the constructor,
      * and encode/decode to/from Base64 notation on the fly.
      *
-     * @see com.reviewsection.utils.Base64
      * @since 1.3
      */
     public static class OutputStream extends java.io.FilterOutputStream {
         
-        private boolean encode;
+        private final boolean encode;
         private int     position;
         private byte[]  buffer;
-        private int     bufferLength;
+        private final int     bufferLength;
         private int     lineLength;
-        private boolean breakLines;
-        private byte[]  b4;         // Scratch used in a few places
+        private final boolean breakLines;
+        private final byte[]  b4;         // Scratch used in a few places
         private boolean suspendEncoding;
-        private int     options;    // Record for later
-        private byte[]  decodabet;  // Local copies to avoid extra method calls
+        private final int     options;    // Record for later
+        private final byte[]  decodabet;  // Local copies to avoid extra method calls
         
         /**
-         * Constructs a {@link com.reviewsection.utils.Base64.OutputStream} in ENCODE mode.
          *
          * @param out the <tt>java.io.OutputStream</tt> to which data will be written.
          * @since 1.3
@@ -1719,7 +1703,6 @@ public class Base64
         
         
         /**
-         * Constructs a {@link com.reviewsection.utils.Base64.OutputStream} in
          * either ENCODE or DECODE mode.
          * <p>
          * Valid options:<pre>
@@ -1732,9 +1715,6 @@ public class Base64
          *
          * @param out the <tt>java.io.OutputStream</tt> to which data will be written.
          * @param options Specified options.
-         * @see com.reviewsection.utils.Base64#ENCODE
-         * @see com.reviewsection.utils.Base64#DECODE
-         * @see com.reviewsection.utils.Base64#DO_BREAK_LINES
          * @since 1.3
          */
         public OutputStream( java.io.OutputStream out, int options ) {

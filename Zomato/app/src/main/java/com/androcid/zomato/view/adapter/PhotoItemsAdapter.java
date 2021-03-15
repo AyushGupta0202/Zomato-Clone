@@ -1,7 +1,6 @@
 package com.androcid.zomato.view.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -9,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.model.PhotoItem;
@@ -119,7 +120,7 @@ public class PhotoItemsAdapter extends RecyclerView.Adapter<PhotoItemsAdapter.Vi
     }
 
     public interface ClickListener {
-        public void onRemoveClickListener(View v, int pos);
+        void onRemoveClickListener(View v, int pos);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

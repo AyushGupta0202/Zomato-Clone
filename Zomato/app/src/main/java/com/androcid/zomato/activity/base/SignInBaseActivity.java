@@ -7,11 +7,12 @@ import android.content.Intent;
 import android.net.TrafficStats;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.androcid.zomato.BuildConfig;
 import com.androcid.zomato.R;
@@ -63,7 +64,7 @@ public class SignInBaseActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener {
 
     private static final String TAG = SignInBaseActivity.class.getSimpleName();
-    private Context context = SignInBaseActivity.this;
+    private final Context context = SignInBaseActivity.this;
 
     //For Google Login
     private static final int RC_SIGN_IN = 9001;

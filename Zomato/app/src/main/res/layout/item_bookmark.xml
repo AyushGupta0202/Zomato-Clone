@@ -7,7 +7,7 @@
     android:layout_marginTop="2dp"
     android:background="@color/white">
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:foreground="@drawable/place_foreground"
@@ -83,6 +83,6 @@
                 android:src="@color/login_line_normal"/>
 
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

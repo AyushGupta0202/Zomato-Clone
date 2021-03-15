@@ -70,7 +70,7 @@ public class UploadImageService extends Service {
 	}
 
 
-	private Callback<NormalResponse> callbackDetails = new Callback<NormalResponse>() {
+	private final Callback<NormalResponse> callbackDetails = new Callback<NormalResponse>() {
         @Override
         public void success(NormalResponse menuDetailResponse, Response response) {
 

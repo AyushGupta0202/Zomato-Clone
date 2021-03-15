@@ -9,11 +9,12 @@ import android.graphics.Matrix;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.TextureView;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.dao.DaoController;
@@ -39,7 +40,7 @@ import java.util.List;
 public class CameraActivity extends AppCompatActivity {
 
     private static final String TAG = CameraActivity.class.getSimpleName();
-    private Context context = CameraActivity.this;
+    private final Context context = CameraActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, CameraActivity.class);

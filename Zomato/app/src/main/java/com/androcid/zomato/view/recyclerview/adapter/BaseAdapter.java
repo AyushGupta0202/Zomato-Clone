@@ -16,11 +16,12 @@
 
 package com.androcid.zomato.view.recyclerview.adapter;
 
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.view.recyclerview.holder.BlankHolder;
 
@@ -52,7 +53,7 @@ public abstract class BaseAdapter extends RecyclerView.Adapter implements BaseAd
 
   private boolean mBaseAdapterEnabled = true;
 
-  private ViewTypeManager mViewTypeManager = new ViewTypeManager();
+  private final ViewTypeManager mViewTypeManager = new ViewTypeManager();
 
   public BaseAdapter(int headerCount, int footerCount, @Nullable RecyclerView.Adapter baseAdapter) {
     mHeaderCount = headerCount;

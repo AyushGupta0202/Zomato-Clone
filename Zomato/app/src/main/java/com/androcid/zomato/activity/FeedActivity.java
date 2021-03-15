@@ -3,8 +3,9 @@ package com.androcid.zomato.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
+import com.google.android.material.tabs.TabLayout;
+
+import androidx.viewpager.widget.ViewPager;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.activity.base.HomeBaseActivity;
@@ -19,7 +20,7 @@ public class FeedActivity extends HomeBaseActivity {
 
     private static final String TAG = FeedActivity.class.getSimpleName();
     ViewPager viewPager;
-    private Context context = FeedActivity.this;
+    private final Context context = FeedActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, FeedActivity.class);

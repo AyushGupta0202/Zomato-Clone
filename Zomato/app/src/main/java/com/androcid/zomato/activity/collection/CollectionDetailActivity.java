@@ -9,15 +9,16 @@ import android.graphics.Rect;
 import android.net.TrafficStats;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.BuildConfig;
 import com.androcid.zomato.R;
@@ -57,7 +58,7 @@ public class CollectionDetailActivity extends AppCompatActivity {
     NestedScrollView scrollView;
     View fadeShadow;
     ImageView checkImage;
-    private Context context = CollectionDetailActivity.this;
+    private final Context context = CollectionDetailActivity.this;
 
     CollectionItem item;
 
@@ -257,11 +258,7 @@ public class CollectionDetailActivity extends AppCompatActivity {
     }
 
     public void selectChange(View view) {
-        if (view.isSelected()) {
-            view.setSelected(false);
-        } else {
-            view.setSelected(true);
-        }
+        view.setSelected(!view.isSelected());
 
         if (view.getId() == R.id.saveButton) {
             int save;

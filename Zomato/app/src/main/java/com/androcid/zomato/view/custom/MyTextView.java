@@ -3,18 +3,15 @@ package com.androcid.zomato.view.custom;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Build;
-import android.support.annotation.Nullable;
 import android.text.Html;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.util.MyFont;
 
-public class MyTextView extends android.support.v7.widget.AppCompatTextView {
+public class MyTextView extends androidx.appcompat.widget.AppCompatTextView {
 
     MyFont myFont;
 

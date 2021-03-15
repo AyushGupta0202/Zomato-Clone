@@ -1,8 +1,8 @@
 package com.androcid.zomato.view.pageradapter;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.androcid.zomato.view.appbarlayout.base.ObservableFragment;
 import com.androcid.zomato.view.appbarlayout.base.ObservablePagerAdapter;

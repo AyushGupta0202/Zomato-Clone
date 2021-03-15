@@ -6,9 +6,10 @@ import android.graphics.Bitmap;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.net.Uri;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
+
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -40,7 +41,7 @@ public class CommonFunctions {
     public static final String Date_HHmm = "hh:mm a";
     public static final String Date_HHmm_ = "HH:mm";
     private static final String TAG = CommonFunctions.class.getSimpleName();
-    private static String SERVER_TZ = "GMT";
+    private static final String SERVER_TZ = "GMT";
 
     public static int randInt(int min, int max) {
         // NOTE: Usually this should be a field rather than a method

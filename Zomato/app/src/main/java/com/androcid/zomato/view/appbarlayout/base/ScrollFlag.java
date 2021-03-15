@@ -2,9 +2,10 @@
 
 package com.androcid.zomato.view.appbarlayout.base;
 
-import android.support.design.widget.AppBarLayout;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.material.appbar.AppBarLayout;
 
 /**
  * Created by Androcid on 10/4/15.
@@ -39,38 +40,23 @@ public class ScrollFlag {
   }
 
   public boolean isFlagEnterAlwaysCollapsedEnabled() {
-    if (vView != null && (mFlags & AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS_COLLAPSED) != 0) {
-      return true;
-    }
-    return false;
+     return vView != null && (mFlags & AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS_COLLAPSED) != 0;
   }
 
   public boolean isFlagEnterAlwaysEnabled() {
-    if (vView != null && (mFlags & AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS) != 0) {
-      return true;
-    }
-    return false;
+     return vView != null && (mFlags & AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS) != 0;
   }
 
   public boolean isFlagExitUntilCollapsedEnabled() {
-    if (vView != null && (mFlags & AppBarLayout.LayoutParams.SCROLL_FLAG_EXIT_UNTIL_COLLAPSED) != 0) {
-      return true;
-    }
-    return false;
+     return vView != null && (mFlags & AppBarLayout.LayoutParams.SCROLL_FLAG_EXIT_UNTIL_COLLAPSED) != 0;
   }
 
   public boolean isFlagScrollEnabled() {
-    if (vView != null && (mFlags & AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL) != 0) {
-      return true;
-    }
-    return false;
+     return vView != null && (mFlags & AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL) != 0;
   }
 
   public boolean isFlagSnapEnabled() {
-    if (vView != null && (mFlags & AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP) != 0) {
-      return true;
-    }
-    return false;
+     return vView != null && (mFlags & AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP) != 0;
   }
 
   public boolean isQuickReturnEnabled() {

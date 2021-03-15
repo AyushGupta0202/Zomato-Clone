@@ -16,10 +16,11 @@
 
 package com.androcid.zomato.view.recyclerview.holder;
 
-import android.support.annotation.LayoutRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.LayoutRes;
 
 public class BlankHolder extends BaseHolder {
 

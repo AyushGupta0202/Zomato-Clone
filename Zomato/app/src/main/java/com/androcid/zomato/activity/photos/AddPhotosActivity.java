@@ -5,15 +5,16 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.activity.PlaceSearchActivity;
@@ -51,7 +52,7 @@ public class AddPhotosActivity extends AppCompatActivity {
 
     private static final String TAG = AddPhotosActivity.class.getSimpleName();
     private static final int SEARCH_PLACE = 111;
-    private Context context = AddPhotosActivity.this;
+    private final Context context = AddPhotosActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, AddPhotosActivity.class);

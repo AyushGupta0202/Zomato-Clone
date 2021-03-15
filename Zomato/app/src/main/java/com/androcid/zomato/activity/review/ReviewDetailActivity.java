@@ -3,11 +3,12 @@ package com.androcid.zomato.activity.review;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.util.CircleTransform;
@@ -17,7 +18,7 @@ import com.squareup.picasso.Picasso;
 public class ReviewDetailActivity extends AppCompatActivity {
 
     private static final String TAG = ReviewDetailActivity.class.getSimpleName();
-    private Context context = ReviewDetailActivity.this;
+    private final Context context = ReviewDetailActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, ReviewDetailActivity.class);

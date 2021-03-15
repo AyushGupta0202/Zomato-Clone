@@ -43,9 +43,9 @@ public class RestaurantImageDao extends AbstractDao<RestaurantImage, Long> {
         public final static Property Restaurant_id	    = new Property(++c, String.class, 	RESTAURANT_ID, 	false, RESTAURANT_ID);
         public final static Property Restaurant_branch_id 	= new Property(++c, String.class, 	RESTAURANT_BRANCH_ID, 	false, RESTAURANT_BRANCH_ID);
         public final static Property Image	    = new Property(++c, String.class, 	IMAGE, 	    false, IMAGE);
-    };
+    }
 
-    private DaoSession daoSession;
+   private DaoSession daoSession;
 
     public RestaurantImageDao(DaoConfig config) {
         super(config);

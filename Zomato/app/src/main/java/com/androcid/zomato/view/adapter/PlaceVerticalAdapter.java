@@ -1,17 +1,18 @@
 package com.androcid.zomato.view.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.androcid.zomato.R;
+import com.androcid.zomato.model.MealTypeItem;
 import com.androcid.zomato.model.PlaceDisplayItem;
 import com.androcid.zomato.model.RestaurantItem;
-import com.androcid.zomato.model.MealTypeItem;
 import com.androcid.zomato.retro.RetroInterface;
 import com.androcid.zomato.util.CommonFunctions;
 import com.androcid.zomato.util.MyFont;
@@ -122,7 +123,7 @@ public class PlaceVerticalAdapter extends RecyclerView.Adapter<PlaceVerticalAdap
     }
 
     public interface ClickListener {
-        public void onItemClickListener(View v, int pos);
+        void onItemClickListener(View v, int pos);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

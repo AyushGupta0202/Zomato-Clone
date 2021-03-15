@@ -16,7 +16,7 @@ import com.androcid.zomato.activity.base.SignInBaseActivity;
 public class StartActivity extends SignInBaseActivity {
 
     private static final String TAG = StartActivity.class.getSimpleName();
-    private Context context = StartActivity.this;
+    private final Context context = StartActivity.this;
 
     public static Intent getCallIntent(Context context) {
         Intent intent = new Intent(context, StartActivity.class);

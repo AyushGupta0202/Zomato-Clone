@@ -16,9 +16,10 @@
 
 package com.androcid.zomato.view.recyclerview;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by henrytao on 10/23/16.

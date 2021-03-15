@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by Androcid on 10/1/15.
  */
-public class NestedScrollView extends android.support.v4.widget.NestedScrollView {
+public class NestedScrollView extends androidx.core.widget.NestedScrollView {
 
   protected List<OnScrollChangeListener> mOnScrollListeners;
 

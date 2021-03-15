@@ -1,9 +1,6 @@
 package com.androcid.zomato.activity;
 
 import android.Manifest;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -13,10 +10,6 @@ import android.net.TrafficStats;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -24,6 +17,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.BuildConfig;
 import com.androcid.zomato.R;
@@ -525,7 +526,7 @@ public class SelectLocationActivity extends ClearBaseActivity implements
 
     private void handleLocation(Location location) {
         if (location != null) {
-            MyLg.e(TAG, "getLatitude() = " + String.valueOf(location.getLatitude()) + "\n getLongitude() = " + String.valueOf(location.getLongitude()));
+            MyLg.e(TAG, "getLatitude() = " + location.getLatitude() + "\n getLongitude() = " + location.getLongitude());
             stopListener();
 
             getNearbyLocation(location);

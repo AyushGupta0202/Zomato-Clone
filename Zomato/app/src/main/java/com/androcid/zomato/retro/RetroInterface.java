@@ -61,28 +61,28 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/loginSocial")
-        public void loginSocial(
+        void loginSocial(
                 @FieldMap Map<String, String> params,
                 Callback<UserResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/loginNormal")
-        public void loginNormal(
+        void loginNormal(
                 @FieldMap Map<String, String> params,
                 Callback<UserResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/registerNormal")
-        public void registerNormal(
+        void registerNormal(
                 @FieldMap Map<String, String> params,
                 Callback<UserResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getRecommendedRestaurants")
-        public void getRecommendedRestaurants(
+        void getRecommendedRestaurants(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.LATITUDE) String latitude,
                 @Field(Constant.LONGITUDE) String longitude,
@@ -91,7 +91,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getAllRestaurants")
-        public void getAllRestaurants(
+        void getAllRestaurants(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.LATITUDE) String latitude,
                 @Field(Constant.LONGITUDE) String longitude,
@@ -100,7 +100,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getRecentRestaurants")
-        public void getRecentRestaurants(
+        void getRecentRestaurants(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.LATITUDE) String latitude,
                 @Field(Constant.LONGITUDE) String longitude,
@@ -109,7 +109,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getCollectionRestaurants")
-        public void getCollectionRestaurants(
+        void getCollectionRestaurants(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.COLLECTION_ID) String collection_id,
                 @Field(Constant.LATITUDE) String latitude,
@@ -119,7 +119,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getSearchRestaurants")
-        public void getSearchRestaurants(
+        void getSearchRestaurants(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.DATA) String data,
                 @Field(Constant.LATITUDE) String latitude,
@@ -129,7 +129,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getRestaurantDetails")
-        public void getRestaurantDetails(
+        void getRestaurantDetails(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.RESTAURANT_BRANCH_ID) String id,
                 Callback<RestaurantDetailResponse> cb
@@ -137,7 +137,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getUserSearch")
-        public void getUserSearch(
+        void getUserSearch(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.NAME) String name,
                 Callback<UserListResponse> cb
@@ -145,14 +145,14 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getUserSuggestion")
-        public void getUserSuggestion(
+        void getUserSuggestion(
                 @Field(Constant.USER_ID) String user_id,
                 Callback<UserListResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getUserFollowers")
-        public void getUserFollowers(
+        void getUserFollowers(
                 @Field(Constant.ID) String _id,
                 @Field(Constant.USER_ID) String user_id,
                 Callback<UserListResponse> cb
@@ -160,7 +160,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getUserFollowing")
-        public void getUserFollowing(
+        void getUserFollowing(
                 @Field(Constant.ID) String _id,
                 @Field(Constant.USER_ID) String user_id,
                 Callback<UserListResponse> cb
@@ -168,7 +168,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/followUser")
-        public void followUser(
+        void followUser(
                 @Field(Constant.ID) String _id,
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.STATUS) String status,
@@ -177,7 +177,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getNearbyLocation")
-        public void getNearbyLocation(
+        void getNearbyLocation(
                 @Field(Constant.LATITUDE) String latitude,
                 @Field(Constant.LONGITUDE) String longitude,
                 Callback<UserLocationResponse> cb
@@ -185,35 +185,35 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getSearchLocation")
-        public void getSearchLocation(
+        void getSearchLocation(
                 @Field(Constant.DATA) String data,
                 Callback<UserLocationResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getPopularLocation")
-        public void getPopularLocation(
+        void getPopularLocation(
                 @Field(Constant.DATA) String data,
                 Callback<UserLocationResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/addUserAddress")
-        public void addUserAddress(
+        void addUserAddress(
                 @FieldMap Map<String, String> params,
                 Callback<UserAddressResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getUserAddress")
-        public void getUserAddress(
+        void getUserAddress(
                 @Field(Constant.USER_ID) String user_id,
                 Callback<UserAddressResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/setUserHandle")
-        public void setUserHandle(
+        void setUserHandle(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.HANDLE) String handle,
                 Callback<NormalResponse> cb
@@ -221,7 +221,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/setUserLocation")
-        public void setUserLocation(
+        void setUserLocation(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.LOCATION_ID) String location_id,
                 Callback<NormalResponse> cb
@@ -229,7 +229,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/setUserDetails")
-        public void setUserDetails(
+        void setUserDetails(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.NAME) String name,
                 @Field(Constant.PHONE_NO) String phone_no,
@@ -239,63 +239,63 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/deleteUserAddress")
-        public void deleteUserAddress(
+        void deleteUserAddress(
                 @Field(Constant.ADDRESS_ID) String address_id,
                 Callback<UserAddressResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getAllCuisine")
-        public void getAllCuisine(
+        void getAllCuisine(
                 @Field(Constant.ID) String id,
                 Callback<CuisineResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getAllOffers")
-        public void getAllOffers(
+        void getAllOffers(
                 @Field(Constant.ID) String id,
                 Callback<OfferResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/createCollection")
-        public void createCollection(
+        void createCollection(
                 @FieldMap Map<String, String> params,
                 Callback<NormalResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getRecommendedCollection")
-        public void getRecommendedCollection(
+        void getRecommendedCollection(
                 @Field(Constant.USER_ID) String id,
                 Callback<CollectionResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getSavedCollection")
-        public void getSavedCollection(
+        void getSavedCollection(
                 @Field(Constant.USER_ID) String id,
                 Callback<CollectionResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getFollowCollection")
-        public void getFollowCollection(
+        void getFollowCollection(
                 @Field(Constant.USER_ID) String id,
                 Callback<CollectionResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getMyCollection")
-        public void getMyCollection(
+        void getMyCollection(
                 @Field(Constant.USER_ID) String id,
                 Callback<CollectionResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/saveCollection")
-        public void saveCollection(
+        void saveCollection(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.COLLECTION_ID) String collection_id,
                 @Field(Constant.STATUS) String status,
@@ -304,7 +304,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/bookmarkRestaurant")
-        public void bookmarkRestaurant(
+        void bookmarkRestaurant(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.RESTAURANT_BRANCH_ID) String restaurant_id,
                 @Field(Constant.STATUS) String status,
@@ -313,7 +313,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/beenthereRestaurant")
-        public void beenthereRestaurant(
+        void beenthereRestaurant(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.RESTAURANT_BRANCH_ID) String restaurant_id,
                 @Field(Constant.STATUS) String status,
@@ -322,7 +322,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getBeenThereRestaurants")
-        public void getBeenThereRestaurants(
+        void getBeenThereRestaurants(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.LATITUDE) String latitude,
                 @Field(Constant.LONGITUDE) String longitude,
@@ -331,7 +331,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getBookmarkedRestaurants")
-        public void getBookmarkedRestaurants(
+        void getBookmarkedRestaurants(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.LATITUDE) String latitude,
                 @Field(Constant.LONGITUDE) String longitude,
@@ -340,28 +340,28 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getUserDineline")
-        public void getUserDineline(
+        void getUserDineline(
                 @Field(Constant.USER_ID) String user_id,
                 Callback<DinelineResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getUserReviews")
-        public void getUserReviews(
+        void getUserReviews(
                 @Field(Constant.USER_ID) String user_id,
                 Callback<ProfileReviewResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getUserPhotos")
-        public void getUserPhotos(
+        void getUserPhotos(
                 @Field(Constant.USER_ID) String user_id,
                 Callback<RestaurantImageResponse> cb
         );
 
         @FormUrlEncoded
         @POST("/getRestaurantPhotos")
-        public void getRestaurantPhotos(
+        void getRestaurantPhotos(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.RESTAURANT_BRANCH_ID) String restaurant_branch_id,
                 Callback<RestaurantImageResponse> cb
@@ -369,7 +369,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getRestaurantMenu")
-        public void getRestaurantMenu(
+        void getRestaurantMenu(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.RESTAURANT_BRANCH_ID) String restaurant_branch_id,
                 Callback<RestaurantImageResponse> cb
@@ -378,7 +378,7 @@ public class RetroInterface {
         //TODO new
         @FormUrlEncoded
         @POST("/getMealRestaurants")
-        public void getMealRestaurants(
+        void getMealRestaurants(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.LATITUDE) String latitude,
                 @Field(Constant.LONGITUDE) String longitude,
@@ -387,7 +387,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/addRestaurantPhotos")
-        public void addRestaurantPhotos(
+        void addRestaurantPhotos(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.RESTAURANT_ID) String restaurant_id,
                 @Field(Constant.RESTAURANT_BRANCH_ID) String restaurant_branch_id,
@@ -397,7 +397,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/addRestaurantReview")
-        public void addRestaurantReview(
+        void addRestaurantReview(
                 @Field(Constant.USER_ID) String user_id,
                 @Field(Constant.RESTAURANT_ID) String restaurant_id,
                 @Field(Constant.RESTAURANT_BRANCH_ID) String restaurant_branch_id,
@@ -409,7 +409,7 @@ public class RetroInterface {
 
         @FormUrlEncoded
         @POST("/getProfileDetails")
-        public void getProfileDetails(
+        void getProfileDetails(
                 @Field(Constant.ID) String _id,
                 @Field(Constant.USER_ID) String user_id,
                 Callback<ProfileDetailResponse> cb

@@ -14,12 +14,12 @@ import java.util.List;
 public class DaoFunctions {
 	
 	private static final String TAG = DaoFunctions.class.getSimpleName();
-    private Context context;
+    private final Context context;
 
 	private DaoMaster daoMaster;
 	private DaoSession daoSession;
     private SQLiteDatabase db;
-    private DaoMaster.DevOpenHelper helper;
+    private final DaoMaster.DevOpenHelper helper;
 
     private RestaurantImageDao restaurantImageDao;
     private PhotoItemDao photoItemDao;

@@ -14,7 +14,7 @@ public class KeyboardDetect {
     // For more information, see https://code.google.com/p/android/issues/detail?id=5497
     // To use this class, simply invoke assistActivity() on an Activity that already has its content view set.
 
-    private View mChildOfContent;
+    private final View mChildOfContent;
     private int usableHeightPrevious;
    // private FrameLayout.LayoutParams frameLayoutParams;
 
@@ -63,7 +63,7 @@ public class KeyboardDetect {
         this.listener = listener;
     }
     public interface KeyboardListener {
-        public void onSoftKeyboardShown(boolean b);
+        void onSoftKeyboardShown(boolean b);
     }
 
 }

@@ -16,7 +16,7 @@
 
 package com.androcid.zomato.view.recyclerview.adapter;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 

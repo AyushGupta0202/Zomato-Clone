@@ -1,8 +1,8 @@
 package com.androcid.zomato.view.pageradapter;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.androcid.zomato.model.RestaurantImage;
 import com.androcid.zomato.view.fragment.ImageFragment;
@@ -18,7 +18,7 @@ public class ImagePagerAdapter extends FragmentPagerAdapter {
 
     private static final String TAG = ImagePagerAdapter.class.getSimpleName();
 
-    private int type;
+    private final int type;
     List<RestaurantImage> list;
     int PAGE_COUNT;
 

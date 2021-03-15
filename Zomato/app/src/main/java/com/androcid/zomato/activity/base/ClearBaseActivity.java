@@ -1,11 +1,12 @@
 package com.androcid.zomato.activity.base;
 
-import android.arch.lifecycle.LifecycleRegistry;
-import android.arch.lifecycle.LifecycleRegistryOwner;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LifecycleRegistry;
+import androidx.lifecycle.LifecycleRegistryOwner;
 
 import com.androcid.zomato.R;
 
@@ -18,7 +19,7 @@ import static com.androcid.zomato.util.Unbinding.unbindDrawables;
 
 public class ClearBaseActivity extends AppCompatActivity implements LifecycleRegistryOwner {
 
-    private Context context = ClearBaseActivity.this;
+    private final Context context = ClearBaseActivity.this;
     private static final String TAG = ClearBaseActivity.class.getSimpleName();
 
     private final LifecycleRegistry mRegistry = new LifecycleRegistry(this);

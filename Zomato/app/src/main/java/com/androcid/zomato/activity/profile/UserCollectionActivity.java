@@ -3,13 +3,14 @@ package com.androcid.zomato.activity.profile;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.activity.collection.AddCollectionActivity;
@@ -34,7 +35,7 @@ import retrofit.client.Response;
 public class UserCollectionActivity extends AppCompatActivity {
 
     private static final String TAG = UserCollectionActivity.class.getSimpleName();
-    private Context context = UserCollectionActivity.this;
+    private final Context context = UserCollectionActivity.this;
 
     public static Intent getCallIntent(Context context, String user_id) {
         Intent intent = new Intent(context, UserCollectionActivity.class);

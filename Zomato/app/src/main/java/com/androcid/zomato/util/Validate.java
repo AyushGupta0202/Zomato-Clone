@@ -53,10 +53,7 @@ public class Validate {
 	    	{
 	    		String topLevelDomain = target.substring(target.lastIndexOf(".") + 1);
 	    		//Log.e(TAG, "topLevelDomain : "+topLevelDomain);
-	    		if(android.util.Patterns.TOP_LEVEL_DOMAIN.matcher(topLevelDomain).matches())
-	    		{
-	    			return true;
-	    		}
+            return android.util.Patterns.TOP_LEVEL_DOMAIN.matcher(topLevelDomain).matches();
 	    	}
 	    	return false;
 	    }
@@ -67,13 +64,9 @@ public class Validate {
 	    if (target.equals("")) {
 	        return false;
 	    } else {
-	    	
-	    	if(android.util.Patterns.WEB_URL.matcher(target).matches())
-	    	{
-	    		return true;
-	    	}
-	    	return false;
-	    }
+
+          return android.util.Patterns.WEB_URL.matcher(target).matches();
+       }
 	}
 	
 	public static boolean isValidPhone(String target) {
@@ -92,10 +85,7 @@ public class Validate {
 	    if (target.equals("")) {
 	        return false;
 	    } else {
-	    	if(target.length()>=targetLength)
-	    		return true;
-	    	else
-	    		return false;
+          return target.length() >= targetLength;
 	    }
 	}
 	
@@ -103,10 +93,7 @@ public class Validate {
 	    if (target.equals("")) {
 	        return false;
 	    } else {
-	    	if(target.length()<=targetLength)
-	    		return true;
-	    	else
-	    		return false;
+          return target.length() <= targetLength;
 	    }
 	}
 	
@@ -114,10 +101,7 @@ public class Validate {
 	    if (target.equals("")) {
 	        return false;
 	    } else {
-	    	if(target.length()==targetLength)
-	    		return true;
-	    	else
-	    		return false;
+          return target.length() == targetLength;
 	    }
 	}
 	
@@ -134,10 +118,8 @@ public class Validate {
 		}
 		try {
             int value = Integer.parseInt(val);
-            if(value>=start && value<=end)
-                return true;
-            return false;
-        }catch(Exception e){
+         return value >= start && value <= end;
+      }catch(Exception e){
             return false;
         }
 	}

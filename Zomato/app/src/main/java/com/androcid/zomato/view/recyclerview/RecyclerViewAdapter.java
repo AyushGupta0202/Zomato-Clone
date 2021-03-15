@@ -18,8 +18,9 @@ package com.androcid.zomato.view.recyclerview;
 
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.view.recyclerview.adapter.BaseAdapter;
 import com.androcid.zomato.view.recyclerview.adapter.EndlessAdapter;
@@ -43,14 +44,14 @@ public abstract class RecyclerViewAdapter extends BaseAdapter implements MultiSt
   private int mEndlessThreshold = 1;
 
   @SuppressLint("UseSparseArrays")
-  private Map<Integer, Integer> mFooterStates = new HashMap<>();
+  private final Map<Integer, Integer> mFooterStates = new HashMap<>();
 
   @SuppressLint("UseSparseArrays")
-  private Map<Integer, Integer> mHeaderStates = new HashMap<>();
+  private final Map<Integer, Integer> mHeaderStates = new HashMap<>();
 
   private OnEndlessListener mOnEndlessListener;
 
-  private List<OnVisibilityChangedListener> mOnVisibilityChangedListeners = new ArrayList<>();
+  private final List<OnVisibilityChangedListener> mOnVisibilityChangedListeners = new ArrayList<>();
 
   private boolean mReachedThreshold;
 

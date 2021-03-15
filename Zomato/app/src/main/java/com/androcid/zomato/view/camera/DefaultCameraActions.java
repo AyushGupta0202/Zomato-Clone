@@ -7,7 +7,7 @@ import android.hardware.Camera;
  */
 public class DefaultCameraActions implements EasyCamera.CameraActions {
 
-    private EasyCamera camera;
+    private final EasyCamera camera;
     DefaultCameraActions(EasyCamera camera) {
         this.camera = camera;
     }

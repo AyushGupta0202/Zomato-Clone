@@ -10,12 +10,7 @@ import android.graphics.Rect;
 import android.net.TrafficStats;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -23,6 +18,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.androcid.zomato.BuildConfig;
 import com.androcid.zomato.R;
@@ -669,7 +670,7 @@ public class PlaceDetailActivity extends AppCompatActivity {
             checkImage.setOnTouchListener(new View.OnTouchListener() {
                 private float pointX;
                 private float pointY;
-                private int tolerance = 50;
+                private final int tolerance = 50;
 
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -784,11 +785,7 @@ public class PlaceDetailActivity extends AppCompatActivity {
     }
 
     public void selectChange(View view) {
-        if (view.isSelected()) {
-            view.setSelected(false);
-        } else {
-            view.setSelected(true);
-        }
+        view.setSelected(!view.isSelected());
 
         if (view.getId() == R.id.bookmarkLay) {
             int save;
@@ -869,11 +866,7 @@ public class PlaceDetailActivity extends AppCompatActivity {
                             SaveItem item = normalResponse.getItems();
 
                             updateVisit(review_count, bookmark_count, item.getCount());
-                            if (item.isStatus()) {
-                                beenThereLay.setSelected(true);
-                            } else {
-                                beenThereLay.setSelected(false);
-                            }
+                            beenThereLay.setSelected(item.isStatus());
 
                         }
 

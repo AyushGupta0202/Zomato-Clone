@@ -7,12 +7,12 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;import androidx.recyclerview.widget.RecyclerView;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.dao.DaoController;
@@ -33,7 +33,7 @@ import java.util.List;
 public class SelectPhotosActivity extends AppCompatActivity {
 
     private static final String TAG = SelectPhotosActivity.class.getSimpleName();
-    private Context context = SelectPhotosActivity.this;
+    private final Context context = SelectPhotosActivity.this;
 
     public static Intent getCallIntent(Context context, BucketItem item) {
         Intent intent = new Intent(context, SelectPhotosActivity.class);

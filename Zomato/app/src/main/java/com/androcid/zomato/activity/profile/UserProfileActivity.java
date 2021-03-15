@@ -3,13 +3,14 @@ package com.androcid.zomato.activity.profile;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.tabs.TabLayout;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.androcid.zomato.R;
 import com.androcid.zomato.activity.level.StatisticsActivity;
@@ -37,7 +38,7 @@ import retrofit.client.Response;
 public class UserProfileActivity extends AppCompatActivity {
 
     private static final String TAG = UserProfileActivity.class.getSimpleName();
-    private Context context = UserProfileActivity.this;
+    private final Context context = UserProfileActivity.this;
     private String setHandle;
 
     public static Intent getCallIntent(Context context, String user_id) {
